@@ -6,7 +6,7 @@
 
 import pandas as pd
 import folium 
-from IPython.display import display, HTML, Image    # installed the eemoji, and imported all necessary things 
+from IPython.display import display, HTML, Image    # installed the emoji, and imported all necessary things 
 import requests
 from ipywidgets import interact_manual
 from ipywidgets import interact
@@ -32,7 +32,7 @@ def geocode(location):
     geodata= response.json()
     return geodata
 
-def filter_campground(counties,campground_df):  #i filtered the caampgrounds by county so i could make a dropdown with just the counties i wanted 
+def filter_campground(counties,campground_df):  #i filtered the campgrounds by county so i could make a dropdown with just the counties i wanted 
     campground_by_county=campgrounds[campgrounds['County']== county]
     campground_filter = campground_by_county[campground_by_county['County'] ]
     return campground_filter # this filters them into a nice way for me to extract information from just 
